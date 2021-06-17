@@ -13,6 +13,7 @@ import Divider from "@material-ui/core/Divider";
 import IconButton from "@material-ui/core/IconButton";
 import Badge from "@material-ui/core/Badge";
 import Container from "@material-ui/core/Container";
+import FeaturedVideoIcon from "@material-ui/icons/FeaturedVideo";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import LinkItem from "@material-ui/core/Link";
@@ -200,6 +201,15 @@ export default function Dashboard() {
               <ListItemText primary="Instalacion" />
             </Link>
           </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <FeaturedVideoIcon />
+            </ListItemIcon>
+            <Link to="/grabaciones">
+              {" "}
+              <ListItemText primary="Grabaciones" />
+            </Link>
+          </ListItem>
           <Divider />
           <ListItem button>
             <ListItemIcon>
@@ -285,6 +295,7 @@ export default function Dashboard() {
                   <Route path="/funciones">
                     <Funciones />
                   </Route>
+                  <Route path="/grabaciones">Aca voy a subir los links</Route>
                   <Route exact path="/">
                     home
                   </Route>

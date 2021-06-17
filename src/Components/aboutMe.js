@@ -11,6 +11,7 @@ import Cesar from "../cesar.jpg";
 import IBM from "../ibm.png";
 import Lien from "../lien.png";
 import Divider from "@material-ui/core/Divider";
+import LinkedIn from "../LI-Logo.png";
 
 const useStyles = makeStyles({
   root: {
@@ -29,9 +30,16 @@ const useStyles = makeStyles({
   flexbox: {
     display: "flex",
     flexDirection: "row",
-    margin: 20,
+    margin: 10,
     alignItems: "center",
     justifyContent: "center",
+  },
+  h2Centered: {
+    textAlign: "center",
+  },
+  textBlue: {
+    color: "#3776ab",
+    textAlign: "center",
   },
 });
 
@@ -50,7 +58,12 @@ export default function ImgMediaCard() {
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography
+            className={classes.h2Centered}
+            gutterBottom
+            variant="h5"
+            component="h2"
+          >
             Cesar Gamboa
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
@@ -72,9 +85,18 @@ export default function ImgMediaCard() {
       </CardActionArea>
       <CardActions>
         <div>
-          <div>cesargamboaavel@gmail.com</div> <br></br>
-          Javascript, Typescript, Python, React, Node JS, Graphql, SQL, NOSQL,
-          AWS, HTML, CSS
+          <div style={{ textAlign: "center" }}>cesargamboaavel@gmail.com</div>{" "}
+          <br></br>
+          <div className="linkedin-container">
+            <a href="https://www.linkedin.com/in/cesar-gamboa-avellan-57690a14b/">
+              {" "}
+              <img className="linkedin-logo" src={LinkedIn}></img>
+            </a>
+          </div>
+          <span className={classes.textBlue}>
+            Javascript, Typescript, Python, React, Node JS, Graphql, SQL, NOSQL,
+            AWS, HTML, CSS
+          </span>
         </div>
       </CardActions>
     </Card>
