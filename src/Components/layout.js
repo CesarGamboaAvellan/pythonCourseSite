@@ -297,7 +297,7 @@ export default function Dashboard() {
                   </Route>
                   <Route path="/grabaciones">Aca voy a subir los links</Route>
                   <Route exact path="/">
-                    home
+                    <InstalationSteps />
                   </Route>
                 </Switch>
               </Paper>
