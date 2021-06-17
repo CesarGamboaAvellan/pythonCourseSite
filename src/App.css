@@ -6,3 +6,20 @@
   height: 30%;
   width: 30px;
 }
+.blackbg-white-text {
+  background-color: black;
+  color: white;
+  font-style: oblique;
+  font-weight: 600;
+  border-radius: 8px;
+}
+.blackbg-white-text div {
+  padding: 8px;
+}
+h1 {
+  color: #3776ab;
+}
+body {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 400;
+}

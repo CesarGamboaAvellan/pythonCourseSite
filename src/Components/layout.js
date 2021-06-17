@@ -29,6 +29,8 @@ import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 import Python from "../python.png";
 import AboutMe from "../Components/aboutMe";
 import InstalationSteps from "../Components/installSteps";
+import Variables from "../Components/variablesAndTypes";
+import Funciones from "../Components/funciones";
 
 function Copyright() {
   return (
@@ -204,14 +206,18 @@ export default function Dashboard() {
               <strong>1</strong>
               <NavigateNextIcon />
             </ListItemIcon>
-            <ListItemText primary="Variables y tipos" />
+            <Link to="/variables">
+              <ListItemText primary="Variables y tipos" />
+            </Link>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
               <strong>2</strong>
               <NavigateNextIcon />
             </ListItemIcon>
-            <ListItemText primary="Funciones" />
+            <Link to="funciones">
+              <ListItemText primary="Funciones" />
+            </Link>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
@@ -273,7 +279,15 @@ export default function Dashboard() {
                     <InstalationSteps />
                   </Route>
                   <Route path="/users">users</Route>
-                  <Route path="/">home</Route>
+                  <Route path="/variables">
+                    <Variables />
+                  </Route>
+                  <Route path="/funciones">
+                    <Funciones />
+                  </Route>
+                  <Route exact path="/">
+                    home
+                  </Route>
                 </Switch>
               </Paper>
             </Grid>
