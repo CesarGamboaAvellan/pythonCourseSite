@@ -32,6 +32,7 @@ import AboutMe from "../Components/aboutMe";
 import InstalationSteps from "../Components/installSteps";
 import Variables from "../Components/variablesAndTypes";
 import Funciones from "../Components/funciones";
+import IfElse from '../Components/ifElse'
 
 function Copyright() {
   return (
@@ -234,7 +235,9 @@ export default function Dashboard() {
               <strong>3</strong>
               <NavigateNextIcon />
             </ListItemIcon>
+            <Link to="logica">
             <ListItemText primary="Ciclos y Logica" />
+            </Link>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
@@ -294,6 +297,9 @@ export default function Dashboard() {
                   </Route>
                   <Route path="/funciones">
                     <Funciones />
+                  </Route>
+                  <Route path="/logica">
+                    <IfElse />
                   </Route>
                   <Route path="/grabaciones">Aca voy a subir los links</Route>
                   <Route exact path="/">
